@@ -1,6 +1,6 @@
+name: Fibonacci_App_Workflow
 on: 
   workflow_dispatch
-name: Fibonacci_App_Workflow
 
 jobs:
   test:
