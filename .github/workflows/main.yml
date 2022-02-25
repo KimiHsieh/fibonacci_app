@@ -13,7 +13,7 @@ jobs:
 
       - name: testing with pytest
         run: |
-          pip install pytest
+          pip install -r requirements.txt  
           pytest -v
 
 #   build-and-deploy:
