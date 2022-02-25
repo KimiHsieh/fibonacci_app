@@ -1,9 +1,6 @@
 on: [push]
 name: Fibonacci_App_Workflow
 
-env:
-  DEPLOY: "false"
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -18,14 +15,12 @@ jobs:
           pip install -r requirements.txt  
           pytest -v
         
-      - run: echo ${{ env.DEPLOY }}
-        if: env.DEPLOY != 'true'
+
 
   build-and-deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ env.DEPLOY }}
-        if: env.DEPLOY == 'true'
       # checkout the repo
       - name: "Checkout GitHub Action"
         uses: actions/checkout@main
