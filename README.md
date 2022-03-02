@@ -1,24 +1,19 @@
-# Fastapi Web Starter
+# CI/CD practice of **Deploy container instance to Azure by GitHub Actions**
 
-Updated: 2022-01-18
-
-[https://shinichiokada.medium.com/](https://shinichiokada.medium.com/) ([Building a Website Starter with FastAPI](https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864)).
+Updated: 2022-02-23
 
 ## Overview
 
-A static simple website ready to deploy.
-This repo includes all the file and it is ready to deploy to Heroku.
-[How to Deploy a FastAPI App on Heroku for Free](https://towardsdatascience.com/how-to-deploy-your-fastapi-app-on-heroku-for-free-8d4271a4ab9)
+The main goal of this project is to practice the process of CI/CD. By using GitHub Actions, we can automate the deployment of a container to Azure Container Instances.
 
-- .env
-- .gitignore
-- app
-- Procfile
-- README.md
-- requirements.txt
-- runtime.txt
-- static
-- templates
+This repo includes all the files, and the simple website is ready to deploy to Azure.
+
+On this website, people can play Fibonacci number.
+
+## CI/CD Workflow
+
+1. The auto testing will be triggered by the workflows of GitHub Actions if there are any code changes. The testing includes simple website testing and the Fibonacci number test.
+2. After the auto testing finishes, GitHub Actions deploys a container to Azure Container Instances.
 
 ## Requirement
 
@@ -36,27 +31,24 @@ Markdown==3.3.6
 pytest==6.2.5
 ```
 
-## Installation & Usage
+## Local Installation & Usage
 
 ```bash
-$ git clone git@github.com:shinokada/fastapi-web-starter.git
-$ cd fastapi-web-starter
+$ git clone git@github.com:KimiHsieh/fibonacci_app.git
+$ cd fibonacci_app
 # install packages
 $ pip install -r requirements.txt
 # start the server
-$ uvicorn app.main:app --reload --port 8080
+$ uvicorn app.main:app --host=0.0.0.0 --port=80
 ```
 
-Visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
+After the local server is started, visit [http://127.0.0.1:80](http://127.0.0.1:80).
 
-![Starting](./images/image-1.png)
-
-## Features
-
-- Menu
-- Unsplash
-- Accordion
-- Markdown pages
+<p align = "center">
+<img src = "./images/home.jpg" width="800"/>
+<img src = "./images/fibonacci.jpg" width="800"/>
+</p>
+<!-- ![Starting]() -->
 
 ## Test
 
@@ -64,23 +56,7 @@ All tests are under `tests` directory.
 
 ```bash
 # Change the directory
-$ cd fastapi-web-starter
+$ cd fibonacci_app
 # Run tests
 $ pytest -v
 ```
-
-## Author
-
-[twitter](https://twitter.com/shinokada)
-
-## Licence
-
-【MIT License】
-
-Copyright 2021 Shinichi Okada
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

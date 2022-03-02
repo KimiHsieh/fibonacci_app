@@ -1,22 +1,20 @@
-<h1>Welcome to FastAPI Website Starter Demo</h1>
+# CI/CD practice of **Deploy container instance to Azure by GitHub Actions**
 
-<p>
-Please read <a href="https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864">my Medium article for details.</a>
-</p>
+The main goal of this project is to practice the process of CI/CD. By using GitHub Actions, we can automate the deployment of a container to Azure Container Instances.
 
-<p>
-This project uses <a href="https://fastapi.tiangolo.com/">FastAPI</a>, <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja2</a>, and <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap4</a>.
-</p>
+- CI/CD service: [GitHub Actions](https://github.com/features/actions).
+- Cloud service: [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/)
+- Web: [FastAPI](https://fastapi.tiangolo.com/) and [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/)
 
+keyword: CI, CD, Docker, GitHub Actions, Azure
 
 <h2>Updated</h2>
 
-
-2021-08-15
+2022-02-23
 
 ## Python environment
 
-3.9.6
+3.8
 
 ## Requirements
 
