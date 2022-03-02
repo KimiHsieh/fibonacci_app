@@ -10,6 +10,12 @@ This repo includes all the files, and the simple website is ready to deploy to A
 
 On this website, people can play Fibonacci number.
 
+## Tools
+
+- CI/CD service: [GitHub Actions](https://github.com/features/actions).
+- Cloud service: [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/)
+- Web: [FastAPI](https://fastapi.tiangolo.com/) and [Jinja2](https://jinja.palletsprojects.com/en/3.0.x/)
+
 ## CI/CD Workflow
 
 1. The auto testing will be triggered by the workflows of GitHub Actions if there are any code changes. The testing includes simple website testing and the Fibonacci number test.
